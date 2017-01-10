@@ -31,6 +31,23 @@ hr {
 		font-size: 2rem;
 }
 
+/*Contacts text in nav */
+.nav > li > span {
+  position: relative;
+  display: block;
+}
+
+.navbar-nav > li > span {
+  padding: 15px 15px;
+  line-height: 20px;
+}
+
+
+
+.navbar-inverse .navbar-nav > li > span {
+  color: #9d9d9d;
+}
+/*end of contacts*/
 /* HEADER END */
 /* MAIN */
 .about-me-text {
