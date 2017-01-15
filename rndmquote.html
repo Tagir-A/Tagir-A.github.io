@@ -3,8 +3,54 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Random Quote Machine</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="rndmquote.css">
 </head>
 <body>
-	<h1>Placeholder</h1>
+	<div class="machine">
+		<p id="quote"></p>
+		<i id="author"></i>
+		<button type="button" onclick="getNewQuote()">New Quote</button>
+	</div>
+	<footer>
+		<a href="https://tagir-a.github.io/">made by Tagir</a>
+	</footer>
+	
+	<script type="text/javascript">	
+		function getXmlHttp(){
+  var xmlhttp;
+  try {
+    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+    try {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (E) {
+      xmlhttp = false;
+    }
+  }
+  if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+    xmlhttp = new XMLHttpRequest();
+  }
+  return xmlhttp;
+}
+		
+		function getNewQuote() {
+			console.log("works");
+			var xmlhttp = getXmlHttp()
+			xmlhttp.open('GET', 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=parseQuote', true);
+			xmlhttp.send(null);
+		}
+	</script>
+	
+	<script type="text/javascript">		
+		function parseQuote(response)
+		{
+			document.getElementById("quote").innerHTML = response.quoteText;
+			document.getElementById("author").innerHTML = response.quoteAuthor;
+		}
+	</script>
+
+	<script type="text/javascript" src="http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=parseQuote"></script>
+
 </body>
 </html>
