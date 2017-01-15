@@ -20,13 +20,16 @@
   crossorigin="anonymous"></script>
   <script>
 		$(document).ready(function(){
+			var quoteTxt;
 			$("#reset-btn").click(function(){
 				
         $.get("http://fucking-great-advice.ru/api/random/censored/", function(data){
 					let quote = data.text
 					quote = quote.replace(/&nbsp;/gi, " ").replace(/&#151;/gi, "—")
 					$("#quote").text(quote);
-				}, "json")				
+					$("#twitter-share").attr("href", "https://twitter.com/intent/tweet?text=" + encodeURI(quote) + "&hashtags=freeCodeCamp");
+				}, "json")	
+				
 			});
 		});
 		
@@ -37,7 +40,7 @@
 		<p id="quote"></p>
 		<i id="author"></i>
 		<button type="button" id="reset-btn">New Quote</button>
-		<button><i class="fa fa-twitter fa-lg"></i></button>
+		<button type="button" id="twitter-btn"><a id="twitter-share" target="_blank" href="#"><i class="fa fa-twitter fa-lg"></i></a></button>
 	</div>
 	<footer>
 		<a href="https://tagir-a.github.io/">made by Tagir</a>
