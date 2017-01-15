@@ -5,52 +5,35 @@
 	<title>Random Quote Machine</title>
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="rndmquote.css">
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script>
+		$(document).ready(function(){
+			$("#reset-btn").click(function(){
+				
+        $.get("http://fucking-great-advice.ru/api/random/censored/", function(data){
+					let quote = data.text
+					quote = quote.replace(/&nbsp;/gi, " ").replace(/&#151;/gi, "—")
+					$("#quote").text(quote);
+				}, "json")				
+			});
+		});
+		
+	</script>
 </head>
 <body>
 	<div class="machine">
 		<p id="quote"></p>
 		<i id="author"></i>
-		<button type="button" onclick="getNewQuote()">New Quote</button>
+		<button type="button" id="reset-btn">New Quote</button>
+		
 	</div>
 	<footer>
 		<a href="https://tagir-a.github.io/">made by Tagir</a>
 	</footer>
 	
-	<script type="text/javascript">	
-		function getXmlHttp(){
-  var xmlhttp;
-  try {
-    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-  } catch (e) {
-    try {
-      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    } catch (E) {
-      xmlhttp = false;
-    }
-  }
-  if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
-    xmlhttp = new XMLHttpRequest();
-  }
-  return xmlhttp;
-}
-		
-		function getNewQuote() {
-			console.log("works");
-			var xmlhttp = getXmlHttp()
-			xmlhttp.open('GET', 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=parseQuote', true);
-			xmlhttp.send(null);
-		}
-	</script>
-	
-	<script type="text/javascript">		
-		function parseQuote(response)
-		{
-			document.getElementById("quote").innerHTML = response.quoteText;
-			document.getElementById("author").innerHTML = response.quoteAuthor;
-		}
-	</script>
-
-	<script type="text/javascript" src="http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=parseQuote"></script>
 
 </body>
 </html>
