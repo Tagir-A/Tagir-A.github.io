@@ -12,7 +12,7 @@ body {
 	//background: grey;
 	box-sizing: border-box;
 	font-size: 16px;
-	font-family: 'PT Serif Caption', serif;
+	font-family: 'Abel', sans-serif;
 }
 
 .machine {
@@ -26,7 +26,7 @@ body {
 }
 
 .machine p {
-	font-size: 4rem;
+	font-size: 3rem;
 	margin-bottom: 1rem;
 }
 

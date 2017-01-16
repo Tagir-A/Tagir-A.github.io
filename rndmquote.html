@@ -12,7 +12,7 @@
 <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#2a2b2b">
 <meta name="theme-color" content="#ffffff">
 <!--end of favicons-->
-	<link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 	<link rel="stylesheet" href="rndmquote.css">
 	<script src="https://use.fontawesome.com/12e044e105.js"></script>
 	<script
@@ -20,29 +20,13 @@
 		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 		crossorigin="anonymous">
 	</script>
-  <script>
-		$(document).ready(function(){
-			function getNewQuote() {	
-				$.get("http://fucking-great-advice.ru/api/random/censored/", function(data)		{
-						let quote = data.text
-						quote = quote.replace(/&nbsp;/gi, " ").replace(/&#151;/gi, "—")
-						$("#quote").text(quote);
-						$("#twitter-share").attr("href", "https://twitter.com/intent/tweet?text=" + encodeURI(quote) + "&hashtags=freeCodeCamp,quotes,great-advice");
-					}, "json")	
-			}
-			getNewQuote();
-			
-			$("#reset-btn").click(function(){
-        getNewQuote();
-		});
-		});
-	</script>
+	<script src="scripts/rndmquote-script.js" ></script>
 </head>
 <body>
 	<div class="machine">
 		<p id="quote"></p>
 		<div class="buttons">
-			<button type="button" id="reset-btn">New Quote</button>
+			<button autofocus type="button" id="reset-btn">New Quote</button>
 			<a id="twitter-share" target="_blank" href="#"><button type="button" id="twitter-btn"><i class="fa fa-twitter fa-lg"></i></button></a>
 		</div>
 	</div>
