@@ -1,0 +1,152 @@
+* {
+	box-sizing: border-box;
+}
+body { 
+	background: #C8B08E;
+	font-size: 16px;
+	font-family: 'Roboto Mono', monospace;
+}
+.container {
+	background: #C8B08E;
+}
+.app {
+	margin: 10px auto;
+	width: 700px;
+}
+.header {
+}
+.text {
+	border-radius: 5px 5px 0 0;
+	background: #74675a;
+	color: white;
+	height: 60px;
+	padding: 15px 0;
+	display: flex;
+	justify-content: center;
+}
+h1 {
+	font-family: 'Rubik', sans-serif;
+	font-size: 2em;
+}
+.menu {
+	background: lightcyan;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+}
+.btn {
+	flex-grow: 1;
+	display: block;
+  font-family: Arial;
+  color: #ffffff;
+  background: #dc7563;
+  padding: 10px 10px;
+  border-left: solid #ffffff 1px;
+  text-decoration: none;
+	text-align: center;
+	text-transform: capitalize;
+}
+.btn:first-child{
+	border: none;
+}
+.btn:hover {
+  background: #EC9671;
+  text-decoration: none;
+}
+nav.menu .active {
+	background: #8c483c;
+  text-decoration: none;
+	border-left: 2px solid lightgreen;
+	cursor: context-menu;
+}
+nav.menu .active:hover {
+	background: #8c483c;
+  text-decoration: none;
+	border-left: 2px solid lightgreen;
+	cursor: context-menu;
+}
+.list {
+	background: #fbfbfb;
+}
+ul {
+	background: cyan;
+}
+li {
+	border-bottom: 1px solid lightgray;
+	background: #fbfbfb;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.logo-container {
+	flex-grow: 0.5;
+	display: flex;
+	justify-content: center;
+}
+.circle {
+	border: 2px solid grey;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+}
+.text-block {
+	height: 70px;
+	flex-grow: 2;
+	max-width: 500px;
+	min-width: 500px;
+}
+h2 {
+	font-family: 'Archivo Black', sans-serif;
+	font-size: 2rem;
+}
+h2 a {
+	text-decoration: none;
+	color: #dc7563;
+}
+h2 a:visited {
+	text-decoration: none;
+	color: #dc7563;
+}
+h2 a:hover {
+	text-decoration: none;
+	color: #ec9671;
+}
+
+p {
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 130%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  overflow: hidden;
+}
+.led-container {
+	flex-grow: 0.2;
+	display: flex;
+	justify-content: center;
+}
+.led {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+.online {
+	background: green;
+}
+.offline {
+	background: darkgray;
+}
+.not-found {
+	background: red;
+}
+.hidden {
+	display: none;
+}
+
+.footer {
+	width: 350px;
+	margin: 10px auto;
+}
