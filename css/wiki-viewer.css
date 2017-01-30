@@ -1,0 +1,88 @@
+body {
+	background: #B3BFAC;
+}
+.verticalCenter {
+  min-height: 95%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 95vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+	
+	flex-direction: column;
+}
+.centering {
+	justify-content: center;
+}
+.queryBox {
+	margin-top: 3rem;
+	margin-bottom: 10px;
+}
+.btn-primary {
+	color: black;
+	background: #B7F4B7;
+	border: 1px solid grey;
+}
+.searchResult {
+	width: 80vw;
+	min-height: 100px;
+	margin-top: 10px;
+	background: whitesmoke;
+	box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.5);
+	border-radius: 5px;
+	border: 1px solid black;
+	text-decoration: none;
+	color: black;
+	padding: 0 20px 0 20px;
+}
+.searchResult h2 {
+	font-size: 3rem;
+	margin-bottom: 5px;
+}
+.searchResult p {
+	font-size: 2rem;
+}
+.searchResult:visited {
+	text-decoration: none;
+	color: black;
+}
+.searchResult:hover {
+	text-decoration: none;
+	color: black;
+	box-shadow: -10px 0px 0px 0px rgba(40,87,168,0.8);
+}
+.searchResult:active {
+	text-decoration: none;
+}
+form {
+                width:500px;
+                margin:10px 0;
+}
+.search-input {
+                padding:8px 15px;
+                background: ;
+                border:0px solid #dbdbdb;
+}
+.search-button {
+                position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
+}
+.search-button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
+}
+
+footer span {
+	color: black;
+}
+footer span a {
+	color: #255d82;
+}
+footer span a:hover {
+	text-decoration: none;
+	color: black;
+	background: cyan;
+}
