@@ -1,0 +1,72 @@
+* {
+		box-sizing: border-box;
+}
+.react {
+	font-size: 18px;
+	display: flex;
+}
+.users {
+	height: 100vh;
+	max-height: 100vh;
+	width: 30vw;
+	background-color: lightblue;
+	border-right: 2px solid black;
+	overflow-y: auto;
+}
+.mymap {
+	height: 100vh;
+	width: 70vw;
+}
+.user-list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	
+}
+.user-bar{
+	width: 100%;
+	background-color: #fbfbfb;
+	border-bottom: 1px solid coral;
+	display: flex;
+}
+.user-bar:first-child .username {
+	background-color: #1febfc;
+	color: #000;
+}
+.user-ava {
+	padding: 5px;
+}
+.user-ava img {
+	border-radius: 50%;
+	max-width: 150px;
+	max-height: 150px;
+}
+.user-info {
+	padding: 5px 0 5px 5px;
+	flex-grow: 1.5;
+	display: flex;
+	flex-direction: column;
+}
+.username {
+	display: block;
+	font-weight: bold;
+	background-color: #dc7563;
+	padding: 5px;
+	color: #fbfbfb;
+}
+.userlinks {
+	padding: 10px;
+	height: 100%;
+	
+}
+.userlinks li {
+	margin-bottom: 10px;
+}
+.userlinks li a {
+	color: #dc7563;
+	text-decoration: none;
+}
+.userlinks li a:hover {
+	text-decoration: underline;
+}
+
