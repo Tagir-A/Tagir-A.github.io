@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(58, 58, 58);
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.selector-container {
+    background-color: #f2f2f2;
+}
+
+.styled-select {
+    height: 30px;
+    overflow: hidden;
+}
+
+#selector {
+    background-color: #f2f2f2;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+}
+
+#selector option {
+    background-color: #f2f2f2;
+}
+
+.flight-card-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.flight-card {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.carrier {
+    background-color: rgb(11, 150, 212);
+    color: #fff;
+    padding-left: 5px;
+}
+.carrier-txt {
+    font-size: 20px;
+}
+
+.details {
+    background-color: rgb(222, 222, 223);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.from {
+    width: 135px;
+}
+.to {
+    width: 135px;
+}
+
+.time {
+    font-size: 24px;
+}
