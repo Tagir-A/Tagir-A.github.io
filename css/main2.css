@@ -1,0 +1,83 @@
+* {
+    --hover-color: yellow;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.title__text,
+.smiley {
+    font-size: 4rem;
+    margin: 1.6rem 1rem;
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin: 1.2rem 1rem;
+}
+
+.summary {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.contacts__title {
+    font-size: 2rem;
+    margin: 0.8rem 0;
+}
+
+.contacts__list {
+    display: flex;
+}
+
+.contacts__item {
+    margin-right: 0.8rem;
+}
+
+.contacts__link {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.contacts__link--vk {
+    background: url("../icons/vk.svg");
+    background-size: cover;
+}
+
+.contacts__link--vk:hover {
+    background-color: var(--hover-color);
+}
+.contacts__link--github {
+    background: url("../icons/github.svg");
+    background-size: cover;
+}
+
+.contacts__link--github:hover {
+    background-color: var(--hover-color);
+}
+.contacts__link--mail {
+    background: url("../icons/envelope.svg");
+    background-size: cover;
+}
+
+.contacts__link--mail:hover {
+    background-color: var(--hover-color);
+}
