@@ -84,12 +84,17 @@ hr {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 100%;
 	width: 100vw;
 	background:	linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 
 .warning-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(50%);
 	font-size: 4rem;
 	color: #f2f2f2;
 	text-align: center;
