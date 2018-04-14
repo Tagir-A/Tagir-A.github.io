@@ -376,4 +376,8 @@ body {
     text-indent: 1rem
 }
 
+.description-text:last-child {
+    margin-left: 20px;
+}
+
 /*# sourceMappingURL=main.1dd4878b.css.map*/
